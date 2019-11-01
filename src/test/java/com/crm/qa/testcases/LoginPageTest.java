@@ -21,15 +21,15 @@ public class LoginPageTest extends TestBase {
 	public void setUp()
 	{
 		initialization();
-		loginpage= new LoginPage();
+		loginpage = new LoginPage();
 		
 	}
-	@Test(priority = 1)
+	//@Test(priority = 1)
 	public void loginpagetest() {
 		String title = loginpage.validateLoginPageTitle();
 		Assert.assertEquals(title, "Free CRM #1 cloud software for any business large or small");
 		}
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void crmLogoImagetest() throws InterruptedException {
 		boolean  flag = loginpage.validateCRMImage();
 		Assert.assertTrue(flag);
@@ -37,13 +37,14 @@ public class LoginPageTest extends TestBase {
 	
 		@Test (priority = 3)
 		public void logintest() {
-		homepage= loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
-		String title = loginpage.validateHomePageTitle();
-		Assert.assertEquals(title, "Cogmento CRM");
+		loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
+		HomePage homePage = new HomePage();
+		String VH = homePage.validateHomePageTitle();
+		Assert.assertEquals(VH, "sateesh k");
 	
 		
 	}
-	@AfterMethod
+//	@AfterMethod
 	public void tearDown() {
 		driver.quit();
 	}

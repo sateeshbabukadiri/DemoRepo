@@ -1,5 +1,6 @@
 package com.crm.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -28,6 +29,8 @@ public class LoginPage extends TestBase {
 	@FindBy(xpath= "//*[name()='image' and @*='/images/cogtiny1.jpg']")	
 	WebElement CRMlogo;
 	
+	
+	
 	// Intializing the page objects
 	public LoginPage() {
 		PageFactory.initElements(driver,this);
@@ -37,9 +40,7 @@ public class LoginPage extends TestBase {
 	{
 		return driver.getTitle();
 			}
-	public String validateHomePageTitle() {
-		return driver.getTitle();
-	}
+	
 	public boolean validateCRMImage()
 		{
 		return CRMlogo.isDisplayed();
