@@ -21,7 +21,7 @@ public class TestBase {
 	public TestBase() {
 			try {
 				prop= new Properties();
-				FileInputStream ip = new FileInputStream("C:\\Users\\Sateesh\\Desktop\\Selinium project\\test\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");	
+				FileInputStream ip = new FileInputStream("C:\\Users\\Sateesh\\Desktop\\SeliniumProject\\DemoRepo\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");	
 				prop.load(ip);
 				}
 		catch(FileNotFoundException e)
@@ -37,11 +37,11 @@ public class TestBase {
   public static void initialization() {
 	  String  browserName = "chrome";
 	  if(browserName.equals("chrome")) {
-		  System.setProperty("webdriver.chrome.driver","C:\\Users\\Sateesh\\Desktop\\Selinium project\\chromedriver_win32\\chromedriver.exe");
+		  System.setProperty("webdriver.chrome.driver","C:\\Users\\Sateesh\\Desktop\\SeliniumProject\\chromedriver_win32\\chromedriver.exe");
 		  driver = new ChromeDriver();
 		   } else if( browserName.equals("firefox")) {
 			   
-			   			System.setProperty("webdriver.gecko.driver", "C:\\Users\\Sateesh\\Desktop\\Selinium project\\geckodriver-v0.24.0-win64\\geckodriver.exe");
+			   			System.setProperty("webdriver.gecko.driver", "C:\\Users\\Sateesh\\Desktop\\SeliniumProject\\geckodriver-v0.24.0-win64\\geckodriver.exe");
 			   			driver = new FirefoxDriver();	
 		   }
 	  driver.manage().window().maximize();
