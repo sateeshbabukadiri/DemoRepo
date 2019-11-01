@@ -24,12 +24,12 @@ public class LoginPageTest extends TestBase {
 		loginpage = new LoginPage();
 		
 	}
-	//@Test(priority = 1)
+	@Test(priority = 1)
 	public void loginpagetest() {
 		String title = loginpage.validateLoginPageTitle();
 		Assert.assertEquals(title, "Free CRM #1 cloud software for any business large or small");
 		}
-	//@Test(priority = 2)
+	@Test(priority = 2)
 	public void crmLogoImagetest() throws InterruptedException {
 		boolean  flag = loginpage.validateCRMImage();
 		Assert.assertTrue(flag);
@@ -44,7 +44,7 @@ public class LoginPageTest extends TestBase {
 	
 		
 	}
-//	@AfterMethod
+	@AfterMethod
 	public void tearDown() {
 		driver.quit();
 	}
